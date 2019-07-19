@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $pageTitle; ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -18,7 +19,7 @@
 
                 <h2 class="title"><?php echo $pageTitle; ?></h2>
                 
-                <form action="gerador.php" method="post">
+                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="form-group">
                         <textarea class="form-control" name="gerador" placeholder="Digite aqui os atributos separados com , (virgula)" autofocus></textarea><br>
                     </div>
@@ -29,14 +30,7 @@
 
                     if(!empty($_POST['gerador'])){
 
-                        echo "<code><div class='' 
-                            style='
-                                height:350px;
-                                overflow:auto;
-                                margin-top:30px;
-                                border:1px solid #ccc;
-                                padding:15px;
-                                background:#111;'>";
+                        echo "<code><div class='code'>";
 
                         $gerador = $_POST['gerador'];
 
