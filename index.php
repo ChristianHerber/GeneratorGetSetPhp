@@ -97,7 +97,7 @@
                                 return \$this->$".strtolower($gr).";<br>
                                 }</p>
                                 <p>public function set".ucfirst($gr)."($".strtolower($gr)."){ <br>
-                                \$this->gerador = $".strtolower($gr).";<br>
+                                \$this->".strtolower($gr)." = $".strtolower($gr).";<br>
                                 }</p>";
 
                         }
